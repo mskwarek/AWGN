@@ -16,7 +16,8 @@ def add_noise_to_signal(signal, noise):
 if __name__=='__main__':
     signal = read_signal_data('dane')
     noise = generate_noise(len(signal))
-    signal_with_noise = add_noise_to_signal(signal, noise)
+    signal_with_noise = [float(signal[i])+noise[i] for i in range(0, len(signal))]
     print "noise:", noise    
     print "signal:", signal
     print "signal with noise", signal_with_noise
+    print "len: ", len(signal_with_noise), len(signal), len(noise)
