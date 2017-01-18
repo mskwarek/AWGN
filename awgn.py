@@ -2,6 +2,8 @@ import argparse
 import numpy
 
 
+''' module for AWGN channel simulation simulation '''
+
 def read_signal_data(filename):
     with open(filename, 'r') as fi:
         return list(fi.read())
